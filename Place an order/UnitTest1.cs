@@ -21,10 +21,31 @@ namespace Place_an_order
 
         //}
 
+        //[Test]
+        //public void Login()
+        //{
+        //    var standard_user = "standard_user";
+        //    driver.Url = "https://www.saucedemo.com/";
+        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        //    IWebElement firstResult = wait.Until(e => e.FindElement(By.Name("login-button")));
+
+        //    //Login
+        //    IWebElement user_name = driver.FindElement(By.Name("user-name"));
+        //    user_name.Click();
+        //    user_name.SendKeys("standard_user");
+        //    IWebElement password = driver.FindElement(By.Name("password"));
+        //    password.Click();
+        //    password.SendKeys("secret_sauce");
+        //    IWebElement login_batton = driver.FindElement(By.Name("login-button"));
+        //    login_batton.Click();
+        //    //List of products
+           
+        //    IWebElement products = wait.Until(e => e.FindElement(By.Name("add-to-cart-sauce-labs-backpack")));
+        //}
+
         [Test]
-        public void Login()
+        public void First_order()
         {
-            var standard_user = "standard_user";
             driver.Url = "https://www.saucedemo.com/";
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             IWebElement firstResult = wait.Until(e => e.FindElement(By.Name("login-button")));
@@ -39,30 +60,9 @@ namespace Place_an_order
             IWebElement login_batton = driver.FindElement(By.Name("login-button"));
             login_batton.Click();
             //List of products
-           
             IWebElement products = wait.Until(e => e.FindElement(By.Name("add-to-cart-sauce-labs-backpack")));
-        }
-
-        [Test]
-        public void Test1()
-        {
-            //driver.Url = "https://www.saucedemo.com/";
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            //IWebElement firstResult = wait.Until(e => e.FindElement(By.Name("login-button")));
-
-            ////Login
-            //IWebElement user_name = driver.FindElement(By.Name("user-name"));
-            //user_name.Click();
-            //user_name.SendKeys("standard_user");
-            //IWebElement password = driver.FindElement(By.Name("password"));
-            //password.Click();
-            //password.SendKeys("secret_sauce");
-            //IWebElement login_batton = driver.FindElement(By.Name("login-button"));
-            //login_batton.Click();
-            ////List of products
-            //IWebElement products = wait.Until(e => e.FindElement(By.Name("add-to-cart-sauce-labs-backpack")));
             //Adding two products
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+          
             IWebElement blackpack = driver.FindElement(By.Name("add-to-cart-sauce-labs-backpack"));
             blackpack.Click();
             IWebElement tshirt = driver.FindElement(By.Name("add-to-cart-sauce-labs-bolt-t-shirt"));
